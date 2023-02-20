@@ -35,10 +35,23 @@ button {
 }
 
 /* ======================== Style ======================== */
+/* Header */
+header {
+  margin-bottom: 80rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: green;
+  width: 100%;
+}
 header nav {
-  border: 1px solid blue;
-  max-width: 1440px;
-  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
 }
 header nav ul {
   display: -webkit-box;
@@ -91,4 +104,33 @@ header nav ul li .link-container:hover::after {
   left: 0;
   top: 100%;
   background-color: #0060ea;
+}
+
+/* Main Sections */
+main {
+  border: 1px solid blue;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10rem;
+}
+main section {
+  max-width: 1024px;
+}
+main section h1 {
+  margin-bottom: 4rem;
+  font-size: 44px;
+}
+main section p {
+  padding-bottom: 2rem;
+  font-size: 28px;
 }
