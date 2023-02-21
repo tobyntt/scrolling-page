@@ -37,7 +37,7 @@ button {
 /* ======================== Style ======================== */
 /* Header */
 header {
-  margin-bottom: 80rem;
+  margin-bottom: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,11 +105,18 @@ header nav ul li .link-container:hover::after {
   top: 100%;
   background-color: #0060ea;
 }
+header nav ul li .link-container-active::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #0060ea;
+}
 
 /* Main Sections */
 main {
-  border: 1px solid blue;
-  max-width: 1440px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,6 +132,7 @@ main {
 }
 main section {
   max-width: 1024px;
+  height: 100vh;
 }
 main section h1 {
   margin-bottom: 4rem;
@@ -133,4 +141,29 @@ main section h1 {
 main section p {
   padding-bottom: 2rem;
   font-size: 28px;
+}
+main .scroll-up-button {
+  bottom: 4rem;
+  right: 4rem;
+  position: fixed;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 66px;
+  aspect-ratio: 1/1;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+}
+main .scroll-up-button:hover {
+  background-color: rgba(0, 0, 0, 0.25);
 }

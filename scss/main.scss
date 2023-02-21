@@ -38,7 +38,7 @@ button {
 
 /* Header */
 header {
-  margin-bottom: 80rem;
+  margin-bottom: 50rem;
   display: flex;
   justify-content: center;
   background-color: green;
@@ -94,6 +94,18 @@ header {
             }
           }
         }
+
+        .link-container-active {
+          &::after {
+            content: "";
+            width: 100%;
+            height: 4px;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: #0060ea;
+          }
+        }
       }
     }
   }
@@ -101,8 +113,6 @@ header {
 
 /* Main Sections */
 main {
-  border: 1px solid blue;
-  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -111,6 +121,7 @@ main {
 
   section {
     max-width: 1024px;
+    height: 100vh;
 
     h1 {
       margin-bottom: 4rem;
@@ -120,6 +131,27 @@ main {
     p {
       padding-bottom: 2rem;
       font-size: 28px;
+    }
+  }
+
+  .scroll-up-button {
+    bottom: 4rem;
+    right: 4rem;
+    position: fixed;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.2);
+    width: 66px;
+    aspect-ratio: 1 / 1;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+
+    &:hover {
+      background-color: rgb(0, 0, 0, 0.25);
     }
   }
 }
